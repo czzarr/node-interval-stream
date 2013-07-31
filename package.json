@@ -1,0 +1,22 @@
+{
+  "name": "node-delay-stream",
+  "version": "0.0.1",
+  "description": "Pipe a stream into a delay-stream to emit data by time intervals",
+  "main": "index.js",
+  "scripts": {
+    "test": "make test"
+  },
+  "keywords": [
+    "stream",
+    "delay",
+    "interval",
+    "time"
+  ],
+  "author": "Stanislas Marion <stanislas.marion@gmail.com> (http://github.com/czzarr)",
+  "license": "MIT",
+  "devDependencies": {
+    "chai": "~1.7.2",
+    "mocha": "~1.12.0",
+    "through": "~2.3.4"
+  }
+}
