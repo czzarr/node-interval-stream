@@ -6,10 +6,10 @@ every x seconds.
 ```javascript
 var request = require('request');
 var IntervalStream  = require('interval-stream');
-var ds = new DelayStream(2000); // emit every 2 seconds
+var is = new IntervalStream(2000); // emit every 2 seconds
 
 request('http://isaacs.couchone.com/registry/_all_docs')
-  .pipe(ds)
+  .pipe(is)
   .pipe(process.stdout);
 ```
 Docs should appear every second.

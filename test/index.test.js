@@ -1,11 +1,11 @@
 var chai = require('chai');
 var through = require('through');
-var DelayedStream = require('../');
-var ds = new DelayedStream();
+var IntervalStream = require('../');
+var is = new IntervalStream();
 
 chai.should();
 
-describe('Delay Stream', function () {
+describe('Interval Stream', function () {
   it('should emit a char every second', function (done) {
     var chunks = [];
     var counter = 0;
@@ -19,14 +19,14 @@ describe('Delay Stream', function () {
       done();
     }
 
-    ds.pipe(through(write, end));
+    is.pipe(through(write, end));
 
-    ds.write('a');
-    ds.write('b');
-    ds.write('c');
-    ds.write('e');
-    ds.write('f');
-    ds.end();
+    is.write('a');
+    is.write('b');
+    is.write('c');
+    is.write('e');
+    is.write('f');
+    is.end();
 
     var iv = setInterval(function () {
       chunks.length.should.equal(++counter);
