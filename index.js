@@ -4,7 +4,7 @@ var util = require('util');
 util.inherits(IntervalStream, Transform);
 
 function IntervalStream (interval, objectMode) {
-  if (!this instanceof IntervalStream) return new IntervalStream(options);
+  if (!this instanceof IntervalStream) return new IntervalStream(interval, objectMode);
   if (typeof interval === 'boolean') {
     objectMode = interval;
     interval = 1000;
