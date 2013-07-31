@@ -1,6 +1,6 @@
 {
-  "name": "delay-stream",
-  "version": "0.0.1",
+  "name": "interval-stream",
+  "version": "0.1.0",
   "description": "Emit data by time intervals",
   "main": "index.js",
   "scripts": {
