@@ -1,4 +1,8 @@
 # node-interval-stream
+
+ [![Build
+Status](https://travis-ci.org/czzarr/node-interval-stream.png)](https://travis-ci.org/czzarr/node-interval-stream)
+
 Use an interval stream in order to synchronously emit data
 every x seconds.
 
