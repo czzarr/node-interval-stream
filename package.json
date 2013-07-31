@@ -1,6 +1,6 @@
 {
   "name": "interval-stream",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Emit data by time intervals",
   "main": "index.js",
   "scripts": {
