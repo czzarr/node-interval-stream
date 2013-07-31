@@ -1,5 +1,5 @@
 {
-  "name": "node-delay-stream",
+  "name": "delay-stream",
   "version": "0.0.1",
   "description": "Emit data by time intervals",
   "main": "index.js",
@@ -18,5 +18,19 @@
     "chai": "~1.7.2",
     "mocha": "~1.12.0",
     "through": "~2.3.4"
+  },
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "chai": "~1.7.2",
+    "through": "~2.3.4"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/czzarr/node-delay-stream.git"
+  },
+  "bugs": {
+    "url": "https://github.com/czzarr/node-delay-stream/issues"
   }
 }
