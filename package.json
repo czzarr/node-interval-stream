@@ -26,9 +26,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/czzarr/node-delay-stream.git"
+    "url": "git://github.com/czzarr/node-interval-stream.git"
   },
   "bugs": {
-    "url": "https://github.com/czzarr/node-delay-stream/issues"
+    "url": "https://github.com/czzarr/node-interval-stream/issues"
   }
 }
