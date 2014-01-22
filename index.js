@@ -1,25 +1,13 @@
-var Transform = require('stream').Transform;
-var util = require('util');
+var through2 = require('through2')
 
-util.inherits(IntervalStream, Transform);
-
-function IntervalStream (interval, objectMode) {
-  if (!this instanceof IntervalStream) return new IntervalStream(interval, objectMode);
-  if (typeof interval === 'boolean') {
-    objectMode = interval;
-    interval = 1000;
-  }
-  objectMode = Boolean(objectMode);
-  Transform.call(this, { objectMode: objectMode })
-  this.interval = interval || 1000;
+module.exports = function (interval, options) {
+  var interval = interval || 1000
+  var is = through2(options, function (chunk, encoding, done) {
+    var self = this;
+    setTimeout(function () {
+      self.push(chunk);
+      done();
+    }, interval);
+  })
+  return is
 }
-
-IntervalStream.prototype._transform = function (chunk, encoding, done) {
-  var self = this;
-  setTimeout(function () {
-    self.push(chunk);
-    done();
-  }, self.interval);
-};
-
-module.exports = IntervalStream
