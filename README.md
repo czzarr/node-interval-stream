@@ -9,11 +9,10 @@ every x seconds.
 ## Example
 ```javascript
 var request = require('request');
-var IntervalStream  = require('interval-stream');
-var is = new IntervalStream(2000); // emit every 2 seconds
+var is  = require('interval-stream');
 
 request('http://isaacs.couchone.com/registry/_all_docs')
-  .pipe(is)
+  .pipe(is(2000)) // emit every 2 seconds
   .pipe(process.stdout);
 ```
 Docs should appear every second.
